@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    color: #fff;
+}
+
+.outer_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.container {
+    border: 2px solid #ee1010;
+    background-color: #9b8e8e;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+}
+
+.card {
+    border: 3px solid #e40c0c;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.date {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.digital {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #f70c0c;
+    padding: 15px;
+    margin: 25px 0;
+}
+
+.days {
+    display: flex;
+    justify-content: end;
+    align-content: end;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.row1 {
+    display: flex;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.row {
+    width: 100%;
+}
+
+input {
+    accent-color: #ee0303;
+}
+
+@media(min-width:320px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media(min-width:720px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media(min-width:1020px) {
+    .container {
+        width: 30%;
+        margin: auto;
+    }
+}
