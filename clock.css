@@ -1,94 +1,83 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
-
-body {
-    color: #fff;
+body{
+    font-family: system-ui;
+    font-weight: 600;
+    color: aliceblue;
 }
-
-.outer_container {
+main{
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 50px;
 }
-
-.container {
-    border: 2px solid #ee1010;
-    background-color: #9b8e8e;
+.outer-line{
+    background-color: rgb(14, 13, 13);
+    width: 30%;
+    padding: 30px;
+    border: 10px solid rgb(95, 94, 94);
+    border-radius: 20px;
+}
+.date{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+.head span{
+    font-size: 20px
+}
+.date-time{
+    margin: 20px 0;
+    border: 2px solid #fd0303;
     border-radius: 10px;
-    width: 50%;
-    margin: auto;
-    padding: 30px;
+    padding: 20px 0;
 }
-
-.card {
-    border: 3px solid #e40c0c;
-    border-radius: 15px;
-    padding: 30px;
+.time{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    border: 2px solid #ff0303;
+    border-radius: 10px;
+    padding: 20px 0;
 }
-
-.date {
-    display: flex;
-    justify-content: space-between;
+.timing span{
+    margin: 0 20px;
+}
+.timer{
+    margin: 10px 10px 10px 0;
+    color: red;
     font-size: 20px;
 }
-
-.digital {
+.timer span{
+    margin: 0 15px;
+}
+.day{
     display: flex;
-    justify-content: space-between;
-    font-size: 25px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    color: #f70c0c;
-    padding: 15px;
-    margin: 25px 0;
+    flex-direction: column;
+    border: 2px solid #ff0303;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
 }
-
-.days {
+.days{
     display: flex;
-    justify-content: end;
-    align-content: end;
-    flex-wrap: wrap;
-    font-size: 14px;
+    justify-content: space-around;
 }
-
-.row1 {
+.am-pm{
     display: flex;
-    text-align: center;
-    padding-bottom: 30px;
+    align-items: center;    
 }
-
-.row {
-    width: 100%;
+.time-am-pm{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 20px;
 }
-
-input {
-    accent-color: #ee0303;
-}
-
-@media(min-width:320px) {
-    .container {
-        width: 100%;
-    }
-}
-
-@media(min-width:720px) {
-    .container {
-        width: 100%;
-    }
-}
-
-@media(min-width:1020px) {
-    .container {
-        width: 30%;
-        margin: auto;
-    }
+.color{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(104, 103, 103, 0.986);
 }

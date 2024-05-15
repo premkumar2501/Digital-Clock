@@ -3,122 +3,75 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date object</title>
-    <link rel="stylesheet" href="clock.css">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="./clock.css">
+    <link rel="icon" href="./clock_image.png">
 </head>
 
 <body>
-    <section class="outer_container">
-        <div class="container">
-            <div class="card">
-                <div class="row">
-                    <div class="date">
-                        <span>Date</span>
-                        <span>Month</span>
-                        <span>Year</span>
-                    </div>
-                    <div class="digital">
-                        <span id="date"></span>
-                        <span id="month"></span>
-                        <span id="year"></span>
-                    </div>
+    <main>
+        <div class="outer-line">
+            <div class="date-time">
+                <div class="date head">
+                    <span>Date</span>
+                    <span>Month</span>
+                    <span>Year</span>
                 </div>
-                <div class="row">
-                    <div class="date">
-                        <span>Hour</span>
-                        <span>Minute</span>
-                        <span>Seconds</span>
-                    </div>
-                    <div class="digital">
-                        <span id="hr">00</span>:
-                        <span id="min">00</span>:
-                        <span id="sec">00</span>
-                    </div>
+                <div class="date">
+                    <span id="date"></span>
+                    <span id="month"></span>
+                    <span id="year"></span>
                 </div>
-                <div class="row row1">
-                    <div class="days">
-                        <div class="type">
-                            <input type="radio" name="sun" id="sun">
-                        </div>
-                        <div class="head">
-                            <h4 class="head-1">SUN</h4>
-                        </div>
-                    </div>
-                    <div class="days">
-                        <div class="type">
-                            <input type="radio" name="mon" id="mon">
-                        </div>
-                        <div class="head">
-                            <h4 class="head-1">MON</h4>
-                        </div>
-                    </div>
-                    <div class="days">
-                        <div class="type">
-                            <input type="radio" name="tue" id="tue">
-                        </div>
-                        <div class="head">
-                            <h4 class="head-1">TUE</h4>
-                        </div>
-                    </div>
-                    <div class="days">
-                        <div class="type">
-                            <input type="radio" name="wed" id="wed">
-                        </div>
-                        <div class="head">
-                            <h4 class="head-1">WED</h4>
-                        </div>
-                    </div>
-                    <div class="days">
-                        <div class="type">
-                            <input type="radio" name="thu" id="thu">
-                        </div>
-                        <div class="head">
-                            <h4 class="head-1">THU</h4>
-                        </div>
-                    </div>
-                    <div class="days">
-                        <div class="type">
-                            <input type="radio" name="fri" id="fri">
-                        </div>
-                        <div class="head">
-                            <h4 class="head-1">FRI</h4>
-                        </div>
-                    </div>
-                    <div class="days">
-                        <div class="type">
-                            <input type="radio" name="sat" id="sat">
-                        </div>
-                        <div class="head">
-                            <h4 class="head-1">SAT</h4>
-                        </div>
-                    </div>
+            </div>
+            <div class="time">
+                <div class='timing head'>
+                    <span>Hour</span>
+                    <span>Minute</span>
+                    <span>Second</span>
                 </div>
-                <div class="row">
-                    <div class="days">
-                        <div class="type">
-                            <input type="radio" name="am" id="am">
-                        </div>
-                        <div class="head">
-                            <h4 class="head-1">AM</h4>
-                        </div>
-                    </div>
-                    <div class="days">
-                        <div class="type1">
-                            <input type="radio" name="pm" id="pm">
-                        </div>
-                        <div class="head">
-                            <h4 class="head-1">PM</h4>
-                        </div>
-                    </div>
+                <div class="timer">
+                    <span id="hour"></span>
+                    <span id="colan">:</span>
+                    <span id="minute"></span>
+                    <span id="colan1">:</span>
+                    <span id="second"></span>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="days">
+                    <div class="color" id="sunday"></div>
+                    <div class="color" id="monday"></div>
+                    <div class="color" id="tuesday"></div>
+                    <div class="color" id="wednesday"></div>
+                    <div class="color" id="thusday"></div>
+                    <div class="color" id="friday"></div>
+                    <div class="color" id="saterday"></div>
+                </div>
+                <div class="days">
+                    <span id="sun">Sun</span>
+                    <span id="mon">Mon</span>
+                    <span id="tue">Tue</span>
+                    <span id="wed">Wed</span>
+                    <span id="thu">Thu</span>
+                    <span id="fri">Fri</span>
+                    <span id="set">Sat</span>
+                </div>
+            </div>
+            <div class="time-am-pm">
+                <div class="am-pm">
+                    <div class="color" id="am"></div>
+                    <p>AM</p>
+                </div>
+                <div class="am-pm">
+                    <div class="color" id="pm"></div>
+                    <p>PM</p>
                 </div>
             </div>
         </div>
-    </section>
-   
-   <script src="clock.js"></script>
-   
+    </main>
+    <script src="./clock.js"></script>
 </body>
 
 </html>

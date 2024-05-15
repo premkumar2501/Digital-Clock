@@ -1,80 +1,80 @@
-let date1 = document.getElementById('date');
-let month1 = document.getElementById('month');
-let year1 = document.getElementById('year')
+let date = document.getElementById('date')
+let month = document.getElementById('month')
+let year = document.getElementById('year')
 
+let fullDate = new Date()
+let day = fullDate.getDate()
+let toMonth = fullDate.getMonth()
+let toYear = fullDate.getFullYear()
+let today = fullDate.getDay()
 
-let date = new Date();
-let toDate = date.getDate();
-let toMonth = date.getMonth() + 1;
-toMonth = toMonth < 10 ? '0' + toMonth : toMonth;
-
-let toYear = date.getFullYear();
-date1.innerText = toDate;
-month1.innerText = toMonth;
-year1.innerText = toYear;
-
-let hours = document.getElementById("hr")
-let mint = document.getElementById('min')
-let sec = document.getElementById('sec')
-
-
-
-function tym() {
-    let currentTime = new Date()
-    current = currentTime.getHours()
-    minitue = currentTime.getMinutes()
-    second = currentTime.getSeconds()
-
-    minitue = minitue < 10 ? '0' + minitue : minitue;
-    second = second < 10 ? '0' + second : second;
-
-    hours.innerText = current;
-    mint.innerText = minitue;
-    sec.innerText = second;
+date.innerHTML = day
+if (toMonth < 10) {
+    toMonth = '0' + toMonth
+    month.innerHTML = toMonth
 }
-setInterval(tym, 1000)
+else {
+    month.innerHTML = toMonth
+}
+year.innerHTML = toYear
 
-let currentDay = date.getDay();
-let currentHour = date.getHours();
+let hour = document.getElementById('hour')
+let minute = document.getElementById('minute')
+let second = document.getElementById('second')
+let colan = document.getElementById('colan')
+let colan1 = document.getElementById('colan1')
 
-let sun = document.getElementById('sun')
-let mon = document.getElementById('mon')
-let tue = document.getElementById('tue')
-let wed = document.getElementById('wed')
-let thu = document.getElementById('thu')
-let fri = document.getElementById('fri')
-let sat = document.getElementById('sat')
+function timer() {
+    fullTime = new Date()
+    let toHour = fullTime.getHours()
+    let toMinute = fullTime.getMinutes()
+    let toSecond = fullTime.getSeconds()
+
+    toHour = toHour < 10 ? '0' + toHour : toHour
+    toMinute = toMinute < 10 ? '0' + toMinute : toMinute
+    toSecond = toSecond < 10 ? '0' + toSecond : toSecond
+
+    if (toSecond % 2 === 0) {
+        colan.style.color = 'black'
+        colan1.style.color = 'black'
+    }
+    else{
+        colan.style.color = 'red'
+        colan1.style.color = 'red'
+    }
+
+    hour.innerHTML = toHour
+    minute.innerHTML = toMinute
+    second.innerHTML = toSecond
+}
+setInterval(timer, 1000)
+
+let sunday = document.getElementById('sunday')
+let monday = document.getElementById('monday')
+let tuesday = document.getElementById('tuesday')
+let wednesday = document.getElementById('wednesday')
+let thusday = document.getElementById('thusday')
+let friday = document.getElementById('friday')
+let saterday = document.getElementById('saterday')
+
+today = today === 0 ?  sunday.style.backgroundColor = 'red' : 
+        today === 1 ? monday.style.backgroundColor = 'red' :
+        today === 2 ? tuesday.style.backgroundColor = 'red' :
+        today === 3 ? wednesday.style.backgroundColor = 'red' :
+        today === 4 ? thusday.style.backgroundColor = 'red' :
+        today === 5 ? friday.style.backgroundColor = 'red' :
+        today === 6 ? saterday.style.backgroundColor = 'red' : null
+
 let am = document.getElementById('am')
 let pm = document.getElementById('pm')
 
-
-if (currentHour < 12) {
-    am.setAttribute('checked', 'checked');
+if ( hour < 12){
+    am.style.backgroundColor = 'red'
+}else{
+    pm.style.backgroundColor = 'red'
 }
-else {
-    pm.setAttribute('checked', 'checked');
-}
+    
 
-switch (currentDay) {
-    case 0:
-        sun.setAttribute('checked', 'checked');
-        break;
-    case 1:
-        mon.setAttribute('checked', 'checked');
-        break;
-    case 2:
-        tue.setAttribute('checked', 'checked');
-        break;
-    case 3:
-        wed.setAttribute('checked', 'checked');
-        break;
-    case 4:
-        thu.setAttribute('checked', 'checked');
-        break;
-    case 5:
-        fri.setAttribute('checked', 'checked');
-        break;
-    case 6:
-        sat.setAttribute('checked', 'checked');
-        break;
-}   
+
+
+
